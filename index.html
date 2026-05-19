@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charity Golf Tournament - Team Roster</title>
+    <style>
+        /* Base Styles */
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #333; margin: 0; padding: 40px 20px; }
+        .header { text-align: center; margin-bottom: 40px; }
+        .header h1 { margin: 0 0 10px 0; color: #1a202c; }
+        .header p { color: #4a5568; font-size: 1.1em; }
+        
+        /* Grid Layout */
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1200px; margin: 0 auto; }
+        
+        /* Card Styles */
+        .card { background: #fff; border-radius: 8px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 6px solid #ccc; transition: transform 0.2s ease; }
+        .card:hover { transform: translateY(-5px); }
+        
+        /* Status Colors */
+        .card.complete { border-top-color: #48bb78; } /* Green for locked teams */
+        .card.incomplete { border-top-color: #ecc94b; } /* Yellow for pending donations */
+        .card.available { border-top-color: #e2e8f0; background: #f8fafc; display: flex; align-items: center; justify-content: center; min-height: 160px; color: #a0aec0;}
+        
+        /* Typography */
+        .team-name { font-size: 1.3em; font-weight: bold; margin-bottom: 15px; color: #2d3748; }
+        .player { margin: 8px 0; font-size: 0.95em; color: #4a5568; }
+        .player span { font-weight: bold; color: #1a202c; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Tournament Course Map</h1>
+        <p>Children's Hospital of Colorado Benefit • August 22, 2026</p>
+    </div>
+
+    <div class="grid-container" id="roster-grid">
+        </div>
+
+    <script>
+        // Fetch the data from the JSON file
+        fetch('players.json')
+            .then(response => response.json())
+            .then(data => {
+                const grid = document.getElementById('roster-grid');
+                
+                data.forEach(team => {
+                    const card = document.createElement('div');
+                    
+                    if (team.status === 'available') {
+                        card.className = 'card available';
+                        card.innerHTML = '<h3>🛒 Cart Available</h3>';
+                    } else {
+                        card.className = `card ${team.status}`;
+                        card.innerHTML = `
+                            <div class="team-name">${team.teamName}</div>
+                            <div class="player">🏌️‍♂️ Capt: <span>${team.captain}</span></div>
+                            <div class="player">🏌️ Player: ${team.player2}</div>
+                            <div class="player">🏌️ Player: ${team.player3}</div>
+                            <div class="player">🏌️ Player: ${team.player4}</div>
+                        `;
+                    }
+                    grid.appendChild(card);
+                });
+            })
+            .catch(error => {
+                console.error('Error loading roster:', error);
+                document.getElementById('roster-grid').innerHTML = '<p style="text-align:center; width:100%;">Could not load team data. Please ensure players.json is in the same folder.</p>';
+            });
+    </script>
+
+</body>
+</html>
