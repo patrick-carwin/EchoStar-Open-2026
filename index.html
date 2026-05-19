@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Charity Golf Tournament Registration</title>
+    <style>
+        /* Modern, Clean Styles */
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; color: #2d3748; margin: 0; padding: 0; }
+        .container { max-width: 800px; margin: 60px auto; padding: 20px; text-align: center; }
+        
+        /* Header Section */
+        .hero h1 { font-size: 2.5em; color: #1a202c; margin-bottom: 10px; }
+        .hero p { font-size: 1.2em; color: #4a5568; margin-top: 0; }
+        .details { color: #718096; font-size: 0.95em; margin-bottom: 40px; }
+
+        /* CRITICAL SAFEGUARD BANNER */
+        .safeguard-banner { background-color: #fffaf0; border-left: 4px solid #dd6b20; padding: 20px; border-radius: 6px; text-align: left; margin-bottom: 40px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .safeguard-banner h3 { margin: 0 0 8px 0; color: #dd6b20; font-size: 1.1em; text-transform: uppercase; letter-spacing: 0.5px; }
+        .safeguard-banner p { margin: 0; font-size: 0.95em; color: #744210; line-height: 1.5; }
+
+        /* Registration Paths / Buttons */
+        .button-zone { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 50px; }
+        @media (max-width: 600px) { .button-zone { grid-template-columns: 1fr; } } /* Stack on mobile */
+
+        .path-card { background: white; padding: 30px 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: space-between; align-items: center; border: 1px solid #e2e8f0; }
+        .path-card h2 { margin: 0 0 10px 0; font-size: 1.4em; color: #2d3748; }
+        .path-card p { font-size: 0.9em; color: #718096; margin: 0 0 20px 0; min-height: 40px; }
+
+        .btn { display: inline-block; width: 85%; padding: 12px 20px; font-weight: bold; font-size: 1em; text-decoration: none; border-radius: 6px; transition: background 0.2s ease, transform 0.1s ease; text-align: center; }
+        .btn:active { transform: scale(0.98); }
+        
+        /* Button Variants */
+        .btn-primary { background-color: #3182ce; color: white; }
+        .btn-primary:hover { background-color: #2b6cb0; }
+        
+        .btn-secondary { background-color: #edf2f7; color: #4a5568; border: 1px solid #cbd5e0; }
+        .btn-secondary:hover { background-color: #e2e8f0; }
+
+        /* Course Map Section Placeholder */
+        .map-section { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px dashed #cbd5e0; color: #a0aec0; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="hero">
+            <h1>2026 Charity Golf Tournament</h1>
+            <p>Benefiting the Children's Hospital of Colorado</p>
+            <div class="details">Tournament Date: July 29, 2026 | Arrowhead Golf Course</div>
+        </div>
+
+        <div class="safeguard-banner">
+            <h3>⚠️ Important Registration Policy</h3>
+            <p>Registration requires an individual donation from every participant. <strong>All donations go directly to the Children's Hospital of Colorado and are strictly non-refundable.</strong> Please ensure your entire team is fully committed and available before completing your transaction.</p>
+        </div>
+
+        <div class="button-zone">
+            <div class="path-card">
+                <div>
+                    <h2>Register a Foursome</h2>
+                    <p>Secure a dedicated golf cart slot. Requires all 4 player details upfront.</p>
+                </div>
+                <a href="#" target="_blank" class="btn btn-primary">Register Team (36 Carts)</a>
+            </div>
+
+            <div class="path-card">
+                <div>
+                    <h2>Register as an Individual</h2>
+                    <p>Join the Free Agent pool. We will place you if a team spot opens up.</p>
+                </div>
+                <a href="#" target="_blank" class="btn btn-secondary">Join Free Agent Pool</a>
+            </div>
+        </div>
+
+        <div class="map-section">
+            <h3>⛳ Live Course Map & Team Roster</h3>
+            <p>The live 36-cart visual grid will be activated immediately following the registration window.</p>
+        </div>
+    </div>
+
+</body>
+</html>
