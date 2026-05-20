@@ -16,6 +16,14 @@
         .hero p { font-size: 1.2em; color: #4a5568; margin-top: 0; }
         .details { color: #718096; font-size: 0.95em; margin-bottom: 30px; }
 
+        .tournament-logo {
+            max-width: 180px; /* Limits the logo width so it stays neat */
+            height: auto;
+            margin-bottom: 15px;
+            /* Optional: Adds a soft shadow behind your logo if it has a transparent background */
+            filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.15)); 
+        }
+
         /* SAFEGUARD BANNER */
         .safeguard-banner { background-color: #fffaf0; border-left: 4px solid #dd6b20; padding: 20px; border-radius: 6px; text-align: left; margin-bottom: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
         .safeguard-banner h3 { margin: 0 0 8px 0; color: #dd6b20; font-size: 1.1em; }
@@ -51,8 +59,9 @@
 </head>
 <body>
 
-    <div class="container">
-        <div class="hero">
+    <div class="hero">
+            <img src="EchoStar Open.png" alt="2026 EchoStar Open Logo" class="tournament-logo">
+            
             <h1>2026 EchoStar Open</h1>
             <p>Benefiting the Children's Hospital of Colorado</p>
             <div class="details">Tournament Date: August 22, 2026 | Red Hawk Ridge Golf Course</div>
