@@ -17,11 +17,14 @@
         .details { color: #718096; font-size: 0.95em; margin-bottom: 30px; }
 
         .tournament-logo {
-            max-width: 180px; /* Limits the logo width so it stays neat */
+            max-width: 400px; /* BUMPED FROM 180px TO 400px FOR A MUCH LARGER DISPLAY */
+            width: 100%;      /* Ensures it scales down cleanly on mobile screens */
             height: auto;
-            margin-bottom: 15px;
-            /* Optional: Adds a soft shadow behind your logo if it has a transparent background */
-            filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.15)); 
+            margin-bottom: 20px;
+            margin-left: auto;  /* Centers the image block horizontally */
+            margin-right: auto; /* Centers the image block horizontally */
+            display: block;
+            filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.15)); 
         }
 
         /* SAFEGUARD BANNER */
@@ -59,7 +62,9 @@
 </head>
 <body>
 
-    <div class="hero">
+    <div class="container">
+
+        <div class="hero">
             <img src="EchoStar Open.png" alt="2026 EchoStar Open Logo" class="tournament-logo">
             
             <h1>2026 EchoStar Open</h1>
@@ -92,31 +97,44 @@
 
         <h2 class="grid-title">⛳ Live Course Map & Cart Roster</h2>
         <div class="grid-container" id="cart-grid">
-            </div>
-    </div>
-
-    <script>
+        </div>
+        
+    </div> <script>
         // ROSTER DATA LIVING DIRECTLY IN THE CODE
         // Edit the info between the [ ] brackets to update your 36 carts.
         const tournamentData = [
             {
-  "status": "pending",
-  "teamName": "Team Alpha",
-  "captain": "Jane Doe",
-  "player2": "John Smith",
-  "player3": "Mike Miller",
-  "player4": "Sarah Jenkins"
-},
-{
-  "status": "confirmed",
-  "teamName": "Hotty Toddy",
-  "captain": "Patrick Carwin",
-  "player2": "Kevin Jensen",
-  "player3": "Adam Stalker",
-  "player4": "Rich Tsapp"
-},
-            { "status": "available" },
-            { "status": "available" },
+              "status": "pending",
+              "teamName": "Team Alpha",
+              "captain": "Jane Doe",
+              "player2": "John Smith",
+              "player3": "Mike Miller",
+              "player4": "Sarah Jenkins"
+            },
+            {
+              "status": "confirmed",
+              "teamName": "Hotty Toddy",
+              "captain": "Patrick Carwin",
+              "player2": "Kevin Jensen",
+              "player3": "Adam Stalker",
+              "player4": "Rich Tsapp"
+            },
+             {
+              "status": "pending",
+              "teamName": "Hotty Toddy 2",
+              "captain": "Patrick Carwin",
+              "player2": "Kevin Jensen",
+              "player3": "Adam Stalker",
+              "player4": "Rich Tsapp"
+            },
+            {
+              "status": "pending",
+              "teamName": "Hotty Toddy 3",
+              "captain": "Patrick Carwin",
+              "player2": "Kevin Jensen",
+              "player3": "Adam Stalker",
+              "player4": "Rich Tsapp"
+            },
             { "status": "available" },
             { "status": "available" },
             { "status": "available" },
